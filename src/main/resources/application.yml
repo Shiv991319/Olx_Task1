@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    enabled: false   # Disable Spring Security if it's not needed
+
+  datasource:
+    url: jdbc:h2:mem:testdb  # Using an in-memory H2 database
+    driver-class-name: org.h2.Driver  # H2 driver
+    username: sa  # Default username for H2
+    password: password  # Default password for H2
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically create/update the schema
+    database-platform: org.hibernate.dialect.H2Dialect  # H2 dialect for Hibernate
+    show-sql: true  # Optionally display SQL queries in the logs
